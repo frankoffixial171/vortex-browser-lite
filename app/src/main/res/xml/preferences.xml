@@ -3,6 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <PreferenceCategory
+        android:title="Appearance"
+        android:iconSpaceReserved="false">
+
+        <ListPreference
+            android:key="dark_mode"
+            android:title="Dark mode"
+            android:summary="Choose dark mode preference"
+            android:defaultValue="system"
+            android:entries="@array/dark_mode_names"
+            android:entryValues="@array/dark_mode_values"
+            android:iconSpaceReserved="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:title="Privacy &amp; Security"
         android:iconSpaceReserved="false">
 
@@ -37,8 +52,50 @@
         <SwitchPreferenceCompat
             android:key="clear_data_on_exit"
             android:title="Clear all data on exit"
-            android:summary="Clear history, cache, cookies, and site data when you close the browser"
+            android:summary="Clear cache, cookies, and site data when you close the browser"
             android:defaultValue="false"
+            android:iconSpaceReserved="false" />
+
+        <SwitchPreferenceCompat
+            android:key="clear_history_on_exit"
+            android:title="Clear history on exit"
+            android:summary="Also clear browsing history when you close the browser"
+            android:defaultValue="false"
+            android:dependency="clear_data_on_exit"
+            android:iconSpaceReserved="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Browsing"
+        android:iconSpaceReserved="false">
+
+        <SwitchPreferenceCompat
+            android:key="swipe_gestures"
+            android:title="Swipe gestures"
+            android:summary="Swipe left/right to go back/forward"
+            android:defaultValue="true"
+            android:iconSpaceReserved="false" />
+
+        <SwitchPreferenceCompat
+            android:key="tab_sleeping"
+            android:title="Tab sleeping"
+            android:summary="Suspend inactive tabs to save memory"
+            android:defaultValue="true"
+            android:iconSpaceReserved="false" />
+
+        <ListPreference
+            android:key="search_engine"
+            android:title="Search engine"
+            android:defaultValue="https://www.google.com/search?q="
+            android:entries="@array/search_engine_names"
+            android:entryValues="@array/search_engine_urls"
+            android:iconSpaceReserved="false" />
+
+        <EditTextPreference
+            android:key="custom_homepage"
+            android:title="Custom homepage"
+            android:summary="Leave empty for Vortex Start page"
             android:iconSpaceReserved="false" />
 
     </PreferenceCategory>
@@ -79,21 +136,14 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="General"
+        android:title="About"
         android:iconSpaceReserved="false">
 
-        <EditTextPreference
-            android:key="custom_homepage"
-            android:title="Custom homepage"
-            android:summary="Leave empty for Vortex Start page"
-            android:iconSpaceReserved="false" />
-
-        <ListPreference
-            android:key="search_engine"
-            android:title="Search engine"
-            android:defaultValue="https://www.google.com/search?q="
-            android:entries="@array/search_engine_names"
-            android:entryValues="@array/search_engine_urls"
+        <Preference
+            android:key="version_info"
+            android:title="Vortex Browser"
+            android:summary="Version 1.0.0"
+            android:selectable="false"
             android:iconSpaceReserved="false" />
 
     </PreferenceCategory>
