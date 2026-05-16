@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.VortexBrowser" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/vortex_primary</item>
+        <item name="colorPrimaryDark">@color/vortex_primary_dark</item>
+        <item name="colorAccent">@color/vortex_accent</item>
+        <item name="android:statusBarColor">@color/vortex_primary</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+
+    <style name="Theme.VortexBrowser.Settings" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/vortex_primary</item>
+        <item name="colorPrimaryDark">@color/vortex_primary_dark</item>
+        <item name="colorAccent">@color/vortex_accent</item>
+    </style>
+</resources>

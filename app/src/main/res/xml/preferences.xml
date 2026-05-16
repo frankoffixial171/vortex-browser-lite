@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:title="Privacy &amp; Security"
+        android:iconSpaceReserved="false">
+
+        <SwitchPreferenceCompat
+            android:key="ad_blocker"
+            android:title="Ad blocker"
+            android:summary="Block ads and popups on websites"
+            android:defaultValue="true"
+            android:iconSpaceReserved="false" />
+
+        <SwitchPreferenceCompat
+            android:key="tracker_blocker"
+            android:title="Tracker blocker"
+            android:summary="Block third-party trackers and analytics"
+            android:defaultValue="true"
+            android:iconSpaceReserved="false" />
+
+        <SwitchPreferenceCompat
+            android:key="fingerprint_protection"
+            android:title="Fingerprint protection"
+            android:summary="Randomize canvas, WebGL, and audio fingerprints"
+            android:defaultValue="true"
+            android:iconSpaceReserved="false" />
+
+        <SwitchPreferenceCompat
+            android:key="force_https"
+            android:title="Force HTTPS"
+            android:summary="Automatically upgrade connections to HTTPS"
+            android:defaultValue="true"
+            android:iconSpaceReserved="false" />
+
+        <SwitchPreferenceCompat
+            android:key="clear_data_on_exit"
+            android:title="Clear all data on exit"
+            android:summary="Clear history, cache, cookies, and site data when you close the browser"
+            android:defaultValue="false"
+            android:iconSpaceReserved="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Proxy"
+        android:iconSpaceReserved="false">
+
+        <SwitchPreferenceCompat
+            android:key="proxy_enabled"
+            android:title="Enable proxy"
+            android:summary="Route traffic through a proxy server"
+            android:defaultValue="false"
+            android:iconSpaceReserved="false" />
+
+        <SwitchPreferenceCompat
+            android:key="proxy_socks"
+            android:title="Use SOCKS5"
+            android:summary="Use SOCKS5 instead of HTTP proxy"
+            android:defaultValue="false"
+            android:dependency="proxy_enabled"
+            android:iconSpaceReserved="false" />
+
+        <EditTextPreference
+            android:key="proxy_host"
+            android:title="Proxy host"
+            android:summary="e.g. proxy.example.com"
+            android:dependency="proxy_enabled"
+            android:iconSpaceReserved="false" />
+
+        <EditTextPreference
+            android:key="proxy_port"
+            android:title="Proxy port"
+            android:summary="e.g. 8080"
+            android:dependency="proxy_enabled"
+            android:iconSpaceReserved="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="General"
+        android:iconSpaceReserved="false">
+
+        <EditTextPreference
+            android:key="custom_homepage"
+            android:title="Custom homepage"
+            android:summary="Leave empty for Vortex Start page"
+            android:iconSpaceReserved="false" />
+
+        <ListPreference
+            android:key="search_engine"
+            android:title="Search engine"
+            android:defaultValue="https://www.google.com/search?q="
+            android:entries="@array/search_engine_names"
+            android:entryValues="@array/search_engine_urls"
+            android:iconSpaceReserved="false" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

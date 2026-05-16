@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Vortex Browser</string>
+    <string name="settings">Settings</string>
+
+    <string-array name="search_engine_names">
+        <item>Google</item>
+        <item>DuckDuckGo</item>
+        <item>Bing</item>
+        <item>Brave Search</item>
+        <item>Yahoo</item>
+    </string-array>
+
+    <string-array name="search_engine_urls">
+        <item>https://www.google.com/search?q=</item>
+        <item>https://duckduckgo.com/?q=</item>
+        <item>https://www.bing.com/search?q=</item>
+        <item>https://search.brave.com/search?q=</item>
+        <item>https://search.yahoo.com/search?p=</item>
+    </string-array>
+</resources>

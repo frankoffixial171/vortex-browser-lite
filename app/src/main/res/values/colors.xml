@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="vortex_primary">#6C5CE7</color>
+    <color name="vortex_primary_dark">#5A4BD1</color>
+    <color name="vortex_accent">#00B4D8</color>
+    <color name="background">#FAFAFA</color>
+    <color name="toolbar_bg">#FFFFFF</color>
+    <color name="url_bar_bg">#F0F0F5</color>
+    <color name="text_primary">#1A1A2E</color>
+    <color name="text_hint">#9E9EB8</color>
+    <color name="icon_tint">#5A5A7A</color>
+    <color name="white">#FFFFFF</color>
+</resources>

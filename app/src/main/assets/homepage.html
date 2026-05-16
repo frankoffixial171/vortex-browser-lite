@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vortex</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 20px;
+}
+.logo {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #6C5CE7, #a29bfe);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    box-shadow: 0 8px 32px rgba(108, 92, 231, 0.4);
+    animation: pulse 3s ease-in-out infinite;
+}
+@keyframes pulse {
+    0%, 100% { box-shadow: 0 8px 32px rgba(108, 92, 231, 0.4); }
+    50% { box-shadow: 0 8px 48px rgba(108, 92, 231, 0.7); }
+}
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    background: linear-gradient(90deg, #a29bfe, #00b4d8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.tagline {
+    font-size: 14px;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 32px;
+}
+.shortcuts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    max-width: 360px;
+    width: 100%;
+    margin-top: 20px;
+}
+.shortcut {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    gap: 6px;
+}
+.shortcut-icon {
+    width: 52px;
+    height: 52px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.2s, background 0.2s;
+}
+.shortcut-icon:active {
+    transform: scale(0.95);
+    background: rgba(255,255,255,0.2);
+}
+.shortcut-name {
+    font-size: 11px;
+    color: rgba(255,255,255,0.6);
+}
+.protection-badge {
+    margin-top: 40px;
+    padding: 10px 20px;
+    background: rgba(108, 92, 231, 0.2);
+    border: 1px solid rgba(108, 92, 231, 0.3);
+    border-radius: 20px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.7);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.shield { font-size: 16px; }
+</style>
+</head>
+<body>
+
+<div class="logo">V</div>
+<h1>Vortex Browser</h1>
+<p class="tagline">Fast. Private. Yours.</p>
+
+<div class="shortcuts">
+    <a href="https://www.google.com" class="shortcut">
+        <div class="shortcut-icon">🔍</div>
+        <span class="shortcut-name">Google</span>
+    </a>
+    <a href="https://www.youtube.com" class="shortcut">
+        <div class="shortcut-icon">▶️</div>
+        <span class="shortcut-name">YouTube</span>
+    </a>
+    <a href="https://twitter.com" class="shortcut">
+        <div class="shortcut-icon">𝕏</div>
+        <span class="shortcut-name">X</span>
+    </a>
+    <a href="https://www.wikipedia.org" class="shortcut">
+        <div class="shortcut-icon">📖</div>
+        <span class="shortcut-name">Wikipedia</span>
+    </a>
+    <a href="https://www.reddit.com" class="shortcut">
+        <div class="shortcut-icon">🗨️</div>
+        <span class="shortcut-name">Reddit</span>
+    </a>
+    <a href="https://github.com" class="shortcut">
+        <div class="shortcut-icon">💻</div>
+        <span class="shortcut-name">GitHub</span>
+    </a>
+    <a href="https://www.instagram.com" class="shortcut">
+        <div class="shortcut-icon">📷</div>
+        <span class="shortcut-name">Instagram</span>
+    </a>
+    <a href="https://www.tiktok.com" class="shortcut">
+        <div class="shortcut-icon">🎵</div>
+        <span class="shortcut-name">TikTok</span>
+    </a>
+</div>
+
+<div class="protection-badge">
+    <span class="shield">🛡️</span>
+    Protection active — ads &amp; trackers blocked
+</div>
+
+</body>
+</html>
